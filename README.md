@@ -2,7 +2,11 @@
 
 Very simple / sparse meteor boiler plate largely based off [Discover Meteor](https://www.discovermeteor.com/).
 
-## Included packages
+## Packages
+### Excluded
+* autopublish
+* insecure
+### Included
 * underscore
 * iron:router
 * twbs:bootstrap
