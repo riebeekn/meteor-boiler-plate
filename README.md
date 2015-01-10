@@ -6,6 +6,7 @@ Very simple / sparse meteor boiler plate largely based off [Discover Meteor](htt
 ### Excluded
 * autopublish
 * insecure
+
 ### Included
 * underscore
 * iron:router
