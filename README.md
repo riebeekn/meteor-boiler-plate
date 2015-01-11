@@ -32,7 +32,7 @@ project
 |- public
 |	 |- favicon.ico
 |- server
-|	 |- fixture.js
+|	 |- fixtures.js
 |	 |- publications.js
 |- README.md
 ```
