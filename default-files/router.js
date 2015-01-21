@@ -4,11 +4,9 @@ Router.configure({
 	notFoundTemplate: 'notFound',
 });
 
-Router.map(function() {
-	this.route('home', {
-		path: '/',
-		template: 'home'
-	});
+Router.route('/', {
+	name: 'home', 
+	template: 'home'
 });
 
 Router.onBeforeAction('loading');

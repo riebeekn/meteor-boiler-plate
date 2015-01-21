@@ -2,6 +2,12 @@
 
 Very simple / sparse meteor boiler plate largely based off [Discover Meteor](https://www.discovermeteor.com/).
 
+To use, open a terminal window:
+```
+ $ chmod +x create.sh
+ $ ./create <app-name> 
+```
+
 ## Packages
 ### Excluded
 * autopublish
