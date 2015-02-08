@@ -9,6 +9,10 @@ if [ -z $1 ]; then
   echo "**** YOU NEED TO SUPPLY AN APP NAME... EXITING ****"
   exit 1
 fi
+	
+if [ "-T" = $2 ]; then
+	create_tests=true
+fi
 
 echo "**** CREATING APP ****"
 echo "    ---> Creating meteor app $1"
@@ -22,6 +26,10 @@ meteor add underscore
 meteor add iron:router
 meteor add twbs:bootstrap
 meteor add sacha:spin
+if [ create_tests ]; then
+	meteor add sanjo:jasmine
+	meteor add velocity:html-reporter
+fi
 
 echo "    ---> Creating / removing default folders and files"
 rm $1.*
@@ -54,5 +62,13 @@ touch server/publications.js
 
 # root
 touch README.md
+
+# tests
+if [ create_tests ]; then
+	mkdir -p tests/jasmine/client/integration
+	cp ../default-files/_wait_for_router_helper.js tests/jasmine/client/integration
+	cp ../default-files/run.sh .
+	chmod +x run.sh
+fi
 
 echo "**** APP CREATED ****"
