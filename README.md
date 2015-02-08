@@ -8,7 +8,7 @@ To use, open a terminal window:
  $ ./create <app-name> 
 ```
 
-To create jasmine integration tests:
+To include jasmine integration tests set-up:
 ```
  $ chmod +x create.sh
  $ ./create <app-name> -T
