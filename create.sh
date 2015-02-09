@@ -13,8 +13,10 @@ if [ -z $1 ]; then
   exit 1
 fi
 	
-if [ "-T" = $2 ]; then
-	create_tests=true
+if [ ! -z $2 ]; then
+	if [ "-T" = $2 ]; then
+		create_tests=true
+	fi
 fi
 
 echo "**** CREATING APP ****"
@@ -29,7 +31,7 @@ meteor add underscore
 meteor add iron:router
 meteor add twbs:bootstrap
 meteor add sacha:spin
-if [ create_tests ]; then
+if [ "$create_tests" = true ]; then
 	meteor add sanjo:jasmine
 	meteor add velocity:html-reporter
 fi
@@ -65,13 +67,14 @@ touch server/publications.js
 
 # root
 touch README.md
+cp ../default-files/settings.json	.
+cp ../default-files/run.sh .
+chmod +x run.sh
 
 # tests
-if [ create_tests ]; then
+if [ "$create_tests" = true ]; then
 	mkdir -p tests/jasmine/client/integration
 	cp ../default-files/_wait_for_router_helper.js tests/jasmine/client/integration
-	cp ../default-files/run.sh .
-	chmod +x run.sh
 fi
 
 echo "**** APP CREATED ****"

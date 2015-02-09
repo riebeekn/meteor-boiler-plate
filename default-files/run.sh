@@ -6,4 +6,4 @@
 # USAGE:  chmod +x run.sh
 #         ./run 
 #################################################################################
-JASMINE_BROWSER=PhantomJS meteor
+JASMINE_BROWSER=PhantomJS meteor --settings settings.json
