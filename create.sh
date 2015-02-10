@@ -68,6 +68,7 @@ touch server/publications.js
 # root
 touch README.md
 cp ../default-files/settings.json	.
+cp ../default-files/.gitignore .
 cp ../default-files/run.sh .
 chmod +x run.sh
 
