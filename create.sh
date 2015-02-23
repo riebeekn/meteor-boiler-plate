@@ -31,6 +31,7 @@ meteor add underscore
 meteor add iron:router
 meteor add twbs:bootstrap
 meteor add sacha:spin
+meteor add aldeed:collection2
 if [ "$create_tests" = true ]; then
 	meteor add sanjo:jasmine
 	meteor add velocity:html-reporter
