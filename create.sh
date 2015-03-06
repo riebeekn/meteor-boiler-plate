@@ -33,6 +33,9 @@ meteor add twbs:bootstrap
 meteor add sacha:spin
 meteor add aldeed:collection2
 meteor add mrt:moment
+amr:parsley.js
+chrismbeckett:toastr
+
 if [ "$create_tests" = true ]; then
 	meteor add sanjo:jasmine
 	meteor add velocity:html-reporter
