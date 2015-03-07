@@ -33,8 +33,9 @@ meteor add twbs:bootstrap
 meteor add sacha:spin
 meteor add aldeed:collection2
 meteor add mrt:moment
-amr:parsley.js
-chrismbeckett:toastr
+meteor add amr:parsley.js
+meteor add chrismbeckett:toastr
+meteor add natestrauser:font-awesome
 
 if [ "$create_tests" = true ]; then
 	meteor add sanjo:jasmine
@@ -54,7 +55,7 @@ cp ../default-files/application.css client/stylesheets
 cp ../default-files/home.html client/templates
 cp ../default-files/layout.html client/templates/application
 cp ../default-files/loading.html client/templates/application
-cp ../default-files/not_found.html client/templates/application
+cp ../default-files/not-found.html client/templates/application
 
 # lib
 mkdir lib
@@ -80,7 +81,7 @@ chmod +x run.sh
 # tests
 if [ "$create_tests" = true ]; then
 	mkdir -p tests/jasmine/client/integration
-	cp ../default-files/_wait_for_router_helper.js tests/jasmine/client/integration
+	cp ../default-files/_wait-for-router-helper.js tests/jasmine/client/integration
 fi
 
 echo "**** APP CREATED ****"
